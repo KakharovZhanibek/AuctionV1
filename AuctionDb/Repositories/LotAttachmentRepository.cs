@@ -63,7 +63,7 @@ namespace AuctionDb.Repositories
                     command.Parameters.Add("@lotItemId", SqlDbType.UniqueIdentifier, int.MaxValue, "LotItemId");
                     adapter.InsertCommand = command;
 
-                    adapter.Update(auctionDbDataSet);
+                    adapter.Update(auctionDbDataSet, "LotItemAttachments");
                 }
             }
         }

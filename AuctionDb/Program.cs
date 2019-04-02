@@ -12,13 +12,15 @@ namespace AuctionDb
 {
     class Program
     {
+        //Добавьте Employee и Organization в БД
+
         static void Main(string[] args)
         {
              Console.WriteLine("Введите название документа");
-             string name = "LOOOT";// Console.ReadLine();
+             string name = Console.ReadLine();
              Console.WriteLine("Введите путь к документу");
-             string path = @"C:\Users\Zhanibek\Desktop\Lafore.pdf";
-             //path += Console.ReadLine();
+             string path = @"";
+             path += Console.ReadLine();
 
              CreateLotAttachViewModel attach1 = new CreateLotAttachViewModel()
              {
@@ -30,16 +32,16 @@ namespace AuctionDb
              attachments.Add(attach1);
 
              Console.WriteLine("Введите название лота");
-            string lotName = "LOOOTik";//Console.ReadLine();
+            string lotName = Console.ReadLine();
 
              Console.WriteLine("Введите описание лота");
-            string lotDescription = "Das is lot";//Console.ReadLine();
+            string lotDescription = Console.ReadLine();
 
              Console.WriteLine("Введите цену лота");
-            decimal initialCost = (decimal)45145000.45;//Decimal.Parse(Console.ReadLine());
+            decimal initialCost = Decimal.Parse(Console.ReadLine());
 
              Console.WriteLine("Введите ID ответственного лица лота");
-            string сreatedByEmployeeId = "EB7E4EF3-35DE-45A1-A7EB-A734FBCEBC16"; //Console.ReadLine();
+            string сreatedByEmployeeId = Console.ReadLine();
 
              CreateAuctionViewModel auctionViewModel = new CreateAuctionViewModel()
              {

@@ -53,7 +53,7 @@ namespace AuctionDb.Repositories
 
                     auctionDbDataSet.Tables["LotItems"].Rows.Add(newRow);
 
-                    adapter.Update(auctionDbDataSet);
+                    adapter.Update(auctionDbDataSet,"LotItems");
                 }
             }
         }

@@ -65,10 +65,10 @@ namespace AuctionDb
             LotItemRepository lotRepository = new LotItemRepository();
             LotAttachmentRepository lotAttachmentRepository = new LotAttachmentRepository();
 
-            using (TransactionScope transactionScope = new TransactionScope())
-            {
-                try
-                {
+            //using (TransactionScope transactionScope = new TransactionScope())
+            //{
+            //    try
+            //    {
                     lotRepository.Add(lot);
                     foreach (CreateLotAttachViewModel item in auctionViewModel.LotAttachmentVMs)
                     {
@@ -82,13 +82,13 @@ namespace AuctionDb
 
                         lotAttachmentRepository.Add(lotAttachment);
                     }
-                    transactionScope.Complete();
-                }
-                catch
-                {
-                    throw new Exception("Transaction failed");
-                }
-            }
+                    //transactionScope.Complete();
+                //}
+                //catch
+                //{
+                //    throw new Exception("Transaction failed");
+                //}
+            //}
         }
     }
 }
